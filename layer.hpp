@@ -54,15 +54,15 @@ class Layer {
 
     Layer() {}
     Layer(int index, int size, ActivationType activationType)
-    : layerIndex(index), size(size), before(size, 0.f), after(size, 0.f) {
+    : layerIndex(index), size(size), before(size, 0.), after(size, 0.) {
 
       if(size <= 0) {
         throw std::invalid_argument("Layer size must be positive");
       }
 
       if(index != 0) {
-        this->gradient = std::vector<double>(size, 0.f);
-        this->bias = std::vector<double>(size, 0.f);
+        this->gradient = std::vector<double>(size, 0.);
+        this->bias = std::vector<double>(size, 0.);
 
 
         this->activation = getActivationPair(activationType).first;
