@@ -38,7 +38,7 @@ int main(){
             
             cout << "Deseja carregar o modelo? (s/n): ";
             cin >> load_model;
-            if (load_model == "y" || load_model == "Y") {
+            if (load_model == "s" || load_model == "S") {
                 cout << "carregando modelo...\n";
                 nn.loadModel();
             } else {
@@ -104,9 +104,9 @@ int main(){
 
         if(load_model == "n"){
             string save_model;
-            cout << "Deseja salvar o modelo? (y/n): ";
+            cout << "Deseja salvar o modelo? (s/n): ";
             cin >> save_model;
-            if (save_model == "y" || save_model == "Y") {
+            if (save_model == "s" || save_model == "S") {
                 cout << "Salvando o modelo...\n";
                 nn.saveModel();
             } else {
