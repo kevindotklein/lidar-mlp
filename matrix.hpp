@@ -71,7 +71,12 @@ class Matrix {
           (*this)(i, j) *= scalar;
         }
       }
+
+      // na vdd nem precisaria retornar, mas ok
+      return *this;
     }
+
+    
 
 };
 
